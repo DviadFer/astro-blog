@@ -1,35 +1,11 @@
 ---
 //Component imports
 import MainLayout from "../layouts/MainLayout.astro"
-
-//Style vars values
-const foregroundColor = "blue";
-const backgroundColor = "lightgrey";
-
-const isRed = true;
 ---
 
 <MainLayout title="Home">
   <h1>Welcome to Astro</h1>
   <p>Start building your Astro site!</p>
-  <!-- We add two classes to the paragraph below: big and red. But red is only applied if isRed is true. -->
-  <p class:list={["big", {red: isRed}]}>Learn more about Astro <a href="https://astro.build">here</a>.</p>
   <a href="/about">About</a>
 </MainLayout>
-
-<style lang="scss" define:vars={{ foregroundColor, backgroundColor}}>
-
-  p {
-    background-color: var(--backgroundColor);
-    color: var(--foregroundColor);
-  }
-
-  .big {
-    font-size: 2rem;
-  }
-
-  .red {
-    color: red;
-  }
-</style>
 
